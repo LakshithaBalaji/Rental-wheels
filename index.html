@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Index</title>
+        <link rel="stylesheet" href="style.css">
+
+        <script src="https://kit.fontawesome.com/8c249f59e0.js" crossorigin="anonymous"></script>       
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">R<b>W</b></div>
+                <ul id="sidemenu">
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="car.html">CARS</a></li>
+                    <li><a href="bike.html">BIKES</a></li>
+                    <li><a href="dashboard.html">DASHBOARD</a></li>
+                    <li><a href="feedback.php">FEEDBACK</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="indexx.php">LOGIN</li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i> 
+            </nav>
+            
+            <script>
+                function Glow3() {
+                    document.getElementById("glow3").className = "active";
+                }
+                function Initial3() {
+                    document.getElementById("glow3").className = "navi";
+                }
+            </script>
+        <script>
+                var myIndex = 0;
+                carousel();
+                function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("slides");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) {
+                        myIndex = 1
+                    }
+                    x[myIndex - 1].style.display = "block";
+                    setTimeout(carousel, 3000);
+                }
+            </script>
+            <div id="Sticky"></div>
+            <script>
+                window.onscroll = function () { myFunction() };
+                var navbar = document.getElementById("up");
+                var sticky = Sticky.offsetTop;
+                function myFunction() {
+                 if (window.pageYOffset >= sticky) {
+                        document.getElementById("up").style.opacity = "1";
+                    }
+                    else {
+                        document.getElementById("up").style.opacity = "0.7";
+                    }
+                }
+            </script>
+    </div></div>
+   <div id="services">
+        <div class="container">
+            <h1 class="sub-title">SERVICE</h1>
+            <div class="services-list"> <div>
+                    <i class="fa-solid fa-car"></i>
+                    <h2>CARS</h2>
+                    <a href="car.html">Click Here</a>
+                </div><div>
+                    <i class="fa-solid fa-motorcycle"></i>
+                    <h2>BIKES</h2>
+                    <a href="bike.html">Click Here</a>
+                </div>
+                </div> </div>
+    </div>
+   <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                  <a><i class="fa-solid fa-user-gear"></i></a>  
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">ABOUT</h1>
+                    <p>Rental wheels helps you out by lending bikes/cars for rent</p>
+                    <div class="tab-titles">
+                       <p class="tab-links active-link" onclick="opentab('skills')">Rent Bike</p>
+                       <p class="tab-links" onclick="opentab('experience')">Rent Car</p>
+                       </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>HOUR/DAYS</span><br></li>
+                        <li><span>WEEKLY/MONTHLY</span><br></li>
+                        <li><span>DAILY BASIS</span><br></li></ul>
+                </div> 
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>HOUR/DAYS</span><br></li>
+                        <li><span>WEEKLY/MONTHLY</span><br></li>
+                        <li><span>DAILY BASIS</span><br></li></ul>
+                </div></div>
+     </div> </div> </div>
+<div id="Feedback">
+        <div class="container">
+            <h1 class="sub-title">Customer FeedBacks</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/fb.png">
+                    <div class="layer">
+                        <h3>FEEDBACK</h3>
+                        <P></P>
+                        <a href="fb.php"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div></div>
+               </div></div>
+        </div></div>
+<div id="contact">
+    <div class="container">
+       <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">CONTACT</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>rentalwheels@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>+91 123456789</p>
+            </div>
+      <div class="contact-right">
+                    <form  name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required >
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2  ">Submit </button>
+                    </form>
+                    <span id="msg"></span></div></div></div>
+    <div class="copyright">
+         <p>copyright @Rental wheels <i class="fa-solid fa-heart"></i></p>
+    </div></div>
+<script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+            </script>
+            <script>
+        var sidemeu =document.getElementById("sidemenu");
+        function openmenu(){
+            sidemeu.style.right="0";
+}
+        function closemenu(){
+            sidemeu.style.right="-200px";
+}
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw2OEUyIqRfgVwy3Xosv1WTn1DlNHYwSIoXrSaCwxtOMLmZbRrrEJFbH1yLjGqyx3o3/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg= document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message sent successfully"
+                setTimeout(function(){
+                            msg.innerHTML=""
+        },5000)
+        form.reset()
+    })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+<script src="script.js"></script>
+</head>
+</body>
+</html>
